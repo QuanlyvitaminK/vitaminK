@@ -1,6 +1,6 @@
-# Kali Bữa Ăn
+# Quản lý Kali trong bữa ăn
 
-Monorepo pnpm + Turborepo + Next.js: ước lượng Kali theo cách chế biến, món Việt, bệnh lý và thuốc (biệt dược hay gặp tại Việt Nam).
+Monorepo pnpm + Turborepo + Next.js: ước lượng Kali theo cách chế biến, món Việt, bệnh lý, thuốc (biệt dược hay gặp tại Việt Nam) và lưu ý thuốc chống đông kháng vitamin K.
 
 ## Cấu trúc
 

@@ -2,39 +2,64 @@ import type { Citation } from "./types";
 
 export const CITATIONS: Citation[] = [
   {
+    id: "vndn-fct",
+    group: "vi",
+    title: "Bảng thành phần thực phẩm Việt Nam",
+    org: "Viện Dinh dưỡng — Bộ Y tế",
+    noteVi:
+      "Hàm lượng Kali tham chiếu trong các nguyên liệu và món ăn quen thuộc tại Việt Nam.",
+  },
+  {
+    id: "duoc-thu-qg",
+    group: "vi",
+    title: "Dược thư Quốc gia Việt Nam",
+    org: "Bộ Y tế",
+    noteVi:
+      "Thông tin biệt dược, hoạt chất, cơ chế giữ/thải Kali và tương tác thuốc tim mạch - huyết áp.",
+  },
+  {
+    id: "vnha-af",
+    group: "vi",
+    title: "Khuyến cáo chẩn đoán và điều trị rung nhĩ / bệnh van tim",
+    org: "Hội Tim mạch học Việt Nam (VNHA)",
+    noteVi:
+      "Nguyên tắc quản lý chế độ ăn ổn định Vitamin K, tránh dao động chỉ số đông máu (INR) khi dùng Sintrom, Warfarin.",
+  },
+  {
     id: "usda-fdc",
+    group: "en",
     title: "FoodData Central",
     org: "U.S. Department of Agriculture",
     year: "2024",
     url: "https://fdc.nal.usda.gov/",
     noteVi:
-      "Hàm lượng Kali/100 g nguyên liệu tham chiếu (giá trị điển hình, làm tròn).",
+      "Cơ sở dữ liệu quốc tế về hàm lượng dinh dưỡng và Kali trong nguyên liệu thô.",
   },
   {
     id: "usda-nrf",
+    group: "en",
     title: "USDA Table of Nutrient Retention Factors, Release 6",
     org: "USDA",
-    year: "2007",
     url: "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/nutrient-retention-information/",
-    noteVi:
-      "Hệ số giữ lại chất dinh dưỡng khi chế biến; Kali tan mạnh trong nước luộc.",
-  },
-  {
-    id: "vndn-fct",
-    title: "Bảng thành phần thực phẩm Việt Nam",
-    org: "Viện Dinh dưỡng — Bộ Y tế",
-    year: "2007/cập nhật",
-    noteVi:
-      "Đối chiếu tên thực phẩm địa phương; khi thiếu số liệu dùng USDA gần đúng.",
+    noteVi: "Cơ sở khoa học về mức hao hụt Kali theo từng cách nấu.",
   },
   {
     id: "kdigo-ckd-2024",
-    title: "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+    group: "en",
+    title: "KDIGO 2024 Clinical Practice Guideline for CKD",
     org: "KDIGO",
     year: "2024",
     url: "https://kdigo.org/guidelines/ckd-evaluation-and-management/",
     noteVi:
-      "Không hạn chế Kali thường quy ở CKD nếu Kali máu bình thường; cá thể hóa khi tăng Kali.",
+      "Khuyến cáo y khoa quốc tế về ngưỡng an toàn Kali cho người bệnh thận mạn.",
+  },
+  {
+    id: "chest-antithrombotic",
+    group: "en",
+    title: "CHEST Guideline on Antithrombotic Therapy",
+    org: "American College of Chest Physicians",
+    noteVi:
+      "Khuyến cáo quốc tế về kiểm soát tương tác rau củ chứa Vitamin K đối với liệu pháp kháng vitamin K.",
   },
   {
     id: "kdigo-ckm-2025",
@@ -70,7 +95,6 @@ export const CITATIONS: Citation[] = [
     id: "bytvn-ckd",
     title: "Hướng dẫn chẩn đoán và điều trị bệnh thận mạn",
     org: "Bộ Y tế Việt Nam",
-    year: "2015–cập nhật khoa điều trị",
     noteVi:
       "Khung lâm sàng CKD tại Việt Nam; chế độ ăn và thuốc phải theo bác sĩ điều trị.",
   },
@@ -78,17 +102,15 @@ export const CITATIONS: Citation[] = [
     id: "bytvn-thn",
     title: "Hướng dẫn chẩn đoán và điều trị tăng huyết áp",
     org: "Bộ Y tế / Hội Tim mạch học Việt Nam (VNHA)",
-    year: "2022+",
     noteVi: "Thuốc hạ áp phổ biến tại VN và theo dõi điện giải.",
   },
   {
     id: "dav-vn",
     title: "Cơ sở dữ liệu thuốc được cấp số đăng ký — Cục Quản lý Dược",
     org: "Cục Quản lý Dược (DAV), Bộ Y tế Việt Nam",
-    year: "tra cứu",
     url: "https://dav.gov.vn/",
     noteVi:
-      "Biệt dược trong app là nhóm thường gặp tại VN (tham khảo Dược thư Quốc gia / tờ HDSD). Người dùng đối chiếu hộp thuốc; số đăng ký có thể đổi theo lô.",
+      "Đối chiếu biệt dược đang lưu hành; số đăng ký có thể đổi theo thời gian.",
   },
   {
     id: "nni-renal-k",

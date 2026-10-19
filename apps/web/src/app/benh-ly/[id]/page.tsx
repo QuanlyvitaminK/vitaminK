@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CONDITIONS, getCitation, getCondition, getMedicine } from "@repo/kali-core";
+import { ConditionLabel } from "@/components/condition-label";
 import { DisclaimerBanner } from "@/components/disclaimer-banner";
 
 type Props = { params: Promise<{ id: string }> };
@@ -27,9 +28,12 @@ export default async function ConditionDetailPage({ params }: Props) {
       <Link href="/benh-ly" className="text-sm text-moss">
         ← Tất cả bệnh lý
       </Link>
-      <h1 className="font-[family-name:var(--font-display)] text-4xl text-moss-deep">
-        {condition.nameVi}
-      </h1>
+      <header className="space-y-2">
+        <ConditionLabel condition={condition} />
+        <h1 className="font-[family-name:var(--font-display)] text-4xl text-moss-deep">
+          {condition.nameVi}
+        </h1>
+      </header>
       <DisclaimerBanner />
       <p>{condition.summaryVi}</p>
       <section>
@@ -66,7 +70,8 @@ export default async function ConditionDetailPage({ params }: Props) {
             const source = getCitation(sourceId);
             return (
               <li key={sourceId}>
-                {source?.org}: {source?.title} ({source?.year})
+                {source?.org}: {source?.title}
+                {source?.year ? ` (${source.year})` : null}
               </li>
             );
           })}

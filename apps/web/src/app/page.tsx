@@ -4,23 +4,27 @@ import { DisclaimerBanner } from "@/components/disclaimer-banner";
 const steps = [
   {
     n: "01",
-    title: "Dữ liệu nguyên liệu",
-    body: "Mỗi thực phẩm có Kali mg/100 g sống, khẩu phần điển hình, và nguồn USDA / Viện Dinh dưỡng.",
+    href: "/bua-an",
+    title: "Ước lượng Kali theo cách chế biến",
+    body: "Ước lượng lượng Kali nạp vào cơ thể theo cách chế biến của từng nguyên liệu: luộc, hấp, xào, nướng, nấu canh hay ngâm luộc kỹ, giúp bạn dễ dàng biết được lượng Kali hao hụt hoặc giữ lại sau khi nấu.",
   },
   {
     n: "02",
-    title: "Hệ số chế biến",
-    body: "Luộc chắt nước làm mất Kali; nấu canh giữ Kali trong nước dùng; ngâm + luộc hai lần giảm mạnh với củ.",
+    href: "/benh-ly",
+    title: "Gợi ý mức an toàn theo từng bệnh lý",
+    body: "Đối chiếu lượng Kali bữa ăn với mức khuyến nghị cho từng tình trạng sức khỏe (suy thận, chạy thận, suy tim hay huyết áp cao) theo các hướng dẫn y tế tin cậy, giúp bạn dễ dàng nhận biết bữa ăn đã an toàn hay chưa.",
   },
   {
     n: "03",
-    title: "Món Việt",
-    body: "Công thức mẫu (canh chua, rau muống xào, thịt kho…) cộng Kali từng dòng nguyên liệu.",
+    href: "/thuoc",
+    title: "Tra cứu thuốc cần chú ý lượng Kali",
+    body: "Dễ dàng tra cứu các thuốc cần quản lý Kali thường gặp tại Việt Nam (như Coversyl, Micardis, Verospiron, Lasix...) theo tên biệt dược, hoạt chất và hàm lượng, giúp nhận biết sớm nguy cơ.",
   },
   {
     n: "04",
-    title: "Bệnh và thuốc",
-    body: "Khung KDIGO, AHA/ESC, Bộ Y tế / VNHA. Thuốc có INN, hàm lượng, biệt dược hay gặp tại Việt Nam.",
+    href: "/benh-ly/thuoc-chong-dong",
+    title: "Lưu ý thuốc chống đông kháng vitamin K",
+    body: "Cảnh báo cần thiết cho người đang dùng nhóm thuốc chống đông kháng vitamin K (như Sintrom, Warfarin...) khi ăn các loại rau vừa giàu Kali vừa giàu Vitamin K (như rau dền, rau ngót, cải xoăn), giúp tránh làm giảm tác dụng chống đông và phòng ngừa nguy cơ hình thành cục máu đông.",
   },
 ];
 
@@ -29,15 +33,16 @@ export default function HomePage() {
     <div className="mx-auto max-w-6xl px-4 py-10">
       <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
         <div>
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-moss">
-            Dinh dưỡng điện giải
-          </p>
-          <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl leading-tight text-moss-deep sm:text-5xl">
+          <h1 className="font-[family-name:var(--font-display)] text-4xl leading-tight text-moss-deep sm:text-5xl">
             Tính Kali trong bữa ăn theo đúng cách bạn nấu.
           </h1>
           <p className="mt-4 max-w-xl text-lg opacity-85">
-            So sánh sống, luộc, hấp, xào, nướng, canh, hoặc ngâm giảm Kali. Tra cứu bệnh cần
-            theo dõi liều Kali và thuốc (biệt dược + hoạt chất) thường lưu hành tại Việt Nam.
+            Quản lý Kali trong bữa ăn đóng vai trò sống còn trong việc giữ nhịp tim đập ổn định,
+            ngăn ngừa biến chứng loạn nhịp hoặc ngừng tim nguy hiểm do thừa/thiếu điện giải. Việc
+            kiểm soát này giúp người dùng thuốc huyết áp - tim mạch tránh được nguy cơ ứ Kali cấp
+            tính, đồng thời bảo đảm an toàn cho người uống thuốc chống đông kháng vitamin K
+            (Sintrom, Warfarin) không bị ảnh hưởng tác dụng thuốc; mà vẫn ăn uống đủ chất, tránh
+            kiêng khem quá mức gây suy kiệt thể trạng, ăn uống không ngon miệng.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
@@ -59,10 +64,15 @@ export default function HomePage() {
 
       <ol className="mt-14 grid gap-4 sm:grid-cols-2">
         {steps.map((step) => (
-          <li key={step.n} className="rounded-3xl border border-line bg-card p-5">
-            <span className="text-clay">{step.n}</span>
-            <h2 className="font-[family-name:var(--font-display)] text-2xl">{step.title}</h2>
-            <p className="mt-2 text-sm opacity-80">{step.body}</p>
+          <li key={step.n}>
+            <Link
+              href={step.href}
+              className="block h-full rounded-3xl border border-line bg-card p-5 hover:border-moss"
+            >
+              <span className="text-clay">{step.n}</span>
+              <h2 className="font-[family-name:var(--font-display)] text-2xl">{step.title}</h2>
+              <p className="mt-2 text-sm opacity-80">{step.body}</p>
+            </Link>
           </li>
         ))}
       </ol>

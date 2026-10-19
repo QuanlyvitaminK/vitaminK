@@ -11,6 +11,8 @@ const effectLabel = {
   decrease: "Có thể hạ Kali máu",
   shift_into_cells: "Đưa Kali từ máu vào tế bào (Kali huyết thanh giảm tạm thời)",
   caution_both: "Không đổi Kali trực tiếp — theo dõi hai chiều",
+  vitamin_k_interaction:
+    "Không làm thay đổi Kali máu — tác dụng thuốc bị ảnh hưởng bởi Vitamin K trong rau",
 };
 
 export function generateStaticParams() {

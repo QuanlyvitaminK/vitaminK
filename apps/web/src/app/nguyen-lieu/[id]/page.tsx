@@ -8,6 +8,7 @@ import {
   getIngredient,
 } from "@repo/kali-core";
 import { DisclaimerBanner } from "@/components/disclaimer-banner";
+import { VitaminKNotice } from "@/components/vitamin-k-notice";
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -43,6 +44,7 @@ export default async function IngredientDetailPage({ params }: Props) {
         <p className="mt-3 max-w-2xl">{ingredient.notesVi}</p>
       </header>
       <DisclaimerBanner />
+      {ingredient.vitaminKRich ? <VitaminKNotice names={[ingredient.nameVi]} /> : null}
       <p className="text-sm">
         Bảng dưới đây so sánh <strong>100 g sống</strong> của cùng nguyên liệu. Cột “mg/100 g
         chín” phản ánh cô đặc do mất nước (xào, chiên, nướng).

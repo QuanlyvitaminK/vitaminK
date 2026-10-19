@@ -8,6 +8,7 @@ export const MEDICINES: Medicine[] = [
     strength: "25 mg",
     formVi: "Viên nén",
     tradeNamesVn: [
+      "Verospiron 25 mg / 50 mg",
       "Aldactone 25 mg",
       "Spironolactone 25 mg (DHG, Imexpharm, và generic khác)",
     ],
@@ -17,7 +18,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Theo dõi Kali và creatinine sau khi tăng liều. Nguy cơ tăng khi kết hợp ACEI/ARB/ARNI, NSAID, hoặc CKD. AHA/HFSA: nền tảng suy tim HFrEF.",
     relatedConditionIds: ["suy-tim", "tang-kali-mau", "benh-than-man"],
-    sourceIds: ["aha-hf-2022", "dav-vn"],
+    sourceIds: ["aha-hf-2022", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "enalapril-10",
@@ -31,7 +32,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Đối chiếu hàm lượng 5/10/20 mg trên vỉ. Không tự thêm viên Kali. Tương tác NSAID và lợi tiểu giữ Kali.",
     relatedConditionIds: ["benh-than-man", "suy-tim", "tang-huyet-ap"],
-    sourceIds: ["kdigo-ckd-2024", "aha-hf-2022", "dav-vn"],
+    sourceIds: ["kdigo-ckd-2024", "aha-hf-2022", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "perindopril-5",
@@ -45,7 +46,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Đọc thành phần: Coversyl đơn chất khác Preterax (có indapamide). Theo dõi Kali.",
     relatedConditionIds: ["tang-huyet-ap", "suy-tim"],
-    sourceIds: ["esc-htn-2024", "dav-vn"],
+    sourceIds: ["esc-htn-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "losartan-50",
@@ -59,7 +60,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Tên INN có chữ potassium (muối) — không phải viên bổ sung Kali. Vẫn có nguy cơ tăng Kali máu.",
     relatedConditionIds: ["benh-than-man", "tang-huyet-ap"],
-    sourceIds: ["kdigo-ckd-2024", "dav-vn"],
+    sourceIds: ["kdigo-ckd-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "valsartan-80",
@@ -72,7 +73,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "ARB.",
     adviceVi: "Còn hàm lượng 160 mg. Có trong Entresto (kết hợp sacubitril).",
     relatedConditionIds: ["suy-tim", "tang-huyet-ap"],
-    sourceIds: ["aha-hf-2022", "dav-vn"],
+    sourceIds: ["aha-hf-2022", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "telmisartan-40",
@@ -85,7 +86,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "ARB tác dụng dài.",
     adviceVi: "Kiểm tra viên kết hợp có phải chỉ amlodipine hay có lợi tiểu.",
     relatedConditionIds: ["tang-huyet-ap"],
-    sourceIds: ["esc-htn-2024", "dav-vn"],
+    sourceIds: ["esc-htn-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "irbesartan-150",
@@ -98,7 +99,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "ARB; hay dùng bệnh thận đái tháo đường.",
     adviceVi: "CoAprovel có HCTZ — Kali có thể không tăng như đơn chất.",
     relatedConditionIds: ["dai-thao-duong-than", "benh-than-man"],
-    sourceIds: ["kdigo-ckd-2024", "dav-vn"],
+    sourceIds: ["kdigo-ckd-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "entresto-100",
@@ -112,7 +113,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Không phối hợp ACEI (cách 36 giờ). Theo dõi Kali như MRA. Biệt dược Novartis được cấp phép tại VN.",
     relatedConditionIds: ["suy-tim", "tang-kali-mau"],
-    sourceIds: ["aha-hf-2022", "dav-vn"],
+    sourceIds: ["aha-hf-2022", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "furosemide-40",
@@ -126,7 +127,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Có thể hạ Kali, hạ magie. Người suy tim vừa dùng spironolactone vừa furosemide: Kali hai chiều.",
     relatedConditionIds: ["suy-tim", "ha-kali-mau", "benh-than-man"],
-    sourceIds: ["aha-hf-2022", "dav-vn"],
+    sourceIds: ["aha-hf-2022", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "hctz-25",
@@ -142,7 +143,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "Lợi tiểu thiazide — thải Kali.",
     adviceVi: "Đọc thành phần viên 'một viên hai chất'. Có thể cần bù Kali theo toa.",
     relatedConditionIds: ["tang-huyet-ap", "ha-kali-mau"],
-    sourceIds: ["esc-htn-2024", "dav-vn"],
+    sourceIds: ["esc-htn-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "indapamide-15",
@@ -155,7 +156,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "Giống thiazide — hạ Kali, hạ natri.",
     adviceVi: "Phổ biến trong phác đồ huyết áp VN. Theo dõi điện giải người già.",
     relatedConditionIds: ["tang-huyet-ap", "ha-kali-mau"],
-    sourceIds: ["esc-htn-2024", "bytvn-thn", "dav-vn"],
+    sourceIds: ["esc-htn-2024", "bytvn-thn", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "kcl-600",
@@ -169,7 +170,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Chỉ dùng khi có chỉ định hạ Kali. Nguy hiểm nếu CKD, đang ACEI+MRA, hoặc tăng Kali. Không nhai viên chậm.",
     relatedConditionIds: ["ha-kali-mau", "tang-kali-mau"],
-    sourceIds: ["dav-vn"],
+    sourceIds: ["duoc-thu-qg", "dav-vn"],
   },
   {
     id: "panangin",
@@ -182,7 +183,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "Thực phẩm thuốc bổ sung Kali và magie.",
     adviceVi: "Người bệnh vẫn phải đối chiếu hàm lượng trên nhãn. Không dùng khi tăng Kali.",
     relatedConditionIds: ["ha-kali-mau"],
-    sourceIds: ["dav-vn"],
+    sourceIds: ["duoc-thu-qg", "dav-vn"],
   },
   {
     id: "kalimate",
@@ -196,7 +197,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Dùng khi tăng Kali theo chỉ định. Tách giờ với thuốc khác. Không thay thế lọc máu cấp cứu.",
     relatedConditionIds: ["tang-kali-mau", "loc-mau", "benh-than-man"],
-    sourceIds: ["kdigo-ckm-2025", "dav-vn"],
+    sourceIds: ["kdigo-ckm-2025", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "cotrimoxazole",
@@ -210,7 +211,7 @@ export const MEDICINES: Medicine[] = [
       "Trimethoprim chẹn kênh ENaC kiểu amiloride — giữ Kali, đặc biệt người già/CKD.",
     adviceVi: "Cảnh giác khi đang ACEI/ARB/spironolactone.",
     relatedConditionIds: ["tang-kali-mau", "benh-than-man"],
-    sourceIds: ["kdigo-ckd-2024", "dav-vn"],
+    sourceIds: ["kdigo-ckd-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "diclofenac-50",
@@ -223,7 +224,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "NSAID giảm prostaglandin thận — giảm thải Kali, giảm GFR.",
     adviceVi: "Tránh tự mua khi đang ACEI + lợi tiểu ('triple whammy').",
     relatedConditionIds: ["benh-than-man", "tang-kali-mau"],
-    sourceIds: ["kdigo-ckd-2024", "dav-vn"],
+    sourceIds: ["kdigo-ckd-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "ibuprofen-400",
@@ -236,7 +237,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "NSAID.",
     adviceVi: "Thuốc không kê đơn vẫn ảnh hưởng Kali và thận.",
     relatedConditionIds: ["benh-than-man"],
-    sourceIds: ["kdigo-ckd-2024", "dav-vn"],
+    sourceIds: ["kdigo-ckd-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "digoxin-025",
@@ -250,7 +251,7 @@ export const MEDICINES: Medicine[] = [
       "Không phải thuốc giữ Kali, nhưng hạ Kali làm tăng độc tính digoxin (loạn nhịp).",
     adviceVi: "Giữ Kali trong khoảng bình thường. Thận trọng khi lợi tiểu mạnh.",
     relatedConditionIds: ["suy-tim", "ha-kali-mau"],
-    sourceIds: ["aha-hf-2022", "dav-vn"],
+    sourceIds: ["aha-hf-2022", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "insulin-human",
@@ -264,7 +265,7 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Dùng trong cấp cứu tăng Kali. Hạ đường huyết/nhịn ăn có thể hạ Kali. Không thay đổi chế độ Kali mạn chỉ vì insulin.",
     relatedConditionIds: ["dai-thao-duong-than", "tang-kali-mau", "ha-kali-mau"],
-    sourceIds: ["kdigo-ckm-2025", "dav-vn"],
+    sourceIds: ["kdigo-ckm-2025", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "salbutamol",
@@ -277,7 +278,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "Beta-2 agonist — đưa Kali vào tế bào.",
     adviceVi: "Liều khí dung cao dùng hỗ trợ tăng Kali cấp. Xịt hen thông thường ít đổi Kali.",
     relatedConditionIds: ["tang-kali-mau", "ha-kali-mau"],
-    sourceIds: ["kdigo-ckm-2025", "dav-vn"],
+    sourceIds: ["kdigo-ckm-2025", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "prednisolone-5",
@@ -290,7 +291,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "Corticoid khoáng có thể tăng thải Kali (tùy loại và liều).",
     adviceVi: "Liều cao kéo dài: theo dõi Kali, đường huyết, huyết áp.",
     relatedConditionIds: ["ha-kali-mau"],
-    sourceIds: ["dav-vn"],
+    sourceIds: ["duoc-thu-qg", "dav-vn"],
   },
   {
     id: "ciclosporin",
@@ -303,7 +304,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "Ưc chế calcineurin — giảm thải Kali, có thể gây tăng Kali.",
     adviceVi: "Ghép tạng: theo dõi Kali chặt. Không tự uống NSAID.",
     relatedConditionIds: ["tang-kali-mau", "benh-than-man"],
-    sourceIds: ["kdigo-ckd-2024", "dav-vn"],
+    sourceIds: ["kdigo-ckd-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "tacrolimus",
@@ -316,7 +317,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "Ưc chế calcineurin.",
     adviceVi: "Tương tự ciclosporin về Kali và thận.",
     relatedConditionIds: ["tang-kali-mau"],
-    sourceIds: ["kdigo-ckd-2024", "dav-vn"],
+    sourceIds: ["kdigo-ckd-2024", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "enoxaparin",
@@ -329,7 +330,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "Heparin/LMWH có thể ức chế aldosterone — tăng Kali khi dùng kéo dài.",
     adviceVi: "Theo dõi Kali người CKD, đái tháo đường, đang ACEI.",
     relatedConditionIds: ["tang-kali-mau"],
-    sourceIds: ["dav-vn"],
+    sourceIds: ["duoc-thu-qg", "dav-vn"],
   },
   {
     id: "captopril-25",
@@ -342,7 +343,7 @@ export const MEDICINES: Medicine[] = [
     mechanismVi: "ACEI tác dụng ngắn; hay dùng cấp cứu huyết áp tại VN.",
     adviceVi: "Vẫn giữ Kali như các ACEI khác nếu dùng lặp lại.",
     relatedConditionIds: ["tang-huyet-ap", "tang-kali-mau"],
-    sourceIds: ["bytvn-thn", "dav-vn"],
+    sourceIds: ["bytvn-thn", "duoc-thu-qg", "dav-vn"],
   },
   {
     id: "amlodipine-note",
@@ -357,7 +358,37 @@ export const MEDICINES: Medicine[] = [
     adviceVi:
       "Đưa vào danh mục vì rất phổ biến tại VN; Kali đổi chủ yếu do thuốc kèm trong viên kết hợp.",
     relatedConditionIds: ["tang-huyet-ap"],
-    sourceIds: ["esc-htn-2024", "dav-vn"],
+    sourceIds: ["esc-htn-2024", "duoc-thu-qg", "dav-vn"],
+  },
+  {
+    id: "acenocoumarol-4",
+    inn: "Acenocoumarol",
+    innVi: "Acenocoumarol",
+    strength: "4 mg (còn 1 mg)",
+    formVi: "Viên nén",
+    tradeNamesVn: ["Sintrom 4 mg", "Acenocoumarol 1 mg / 4 mg (generic)"],
+    potassiumEffect: "vitamin_k_interaction",
+    mechanismVi:
+      "Thuốc chống đông kháng vitamin K. Không làm thay đổi Kali máu, nhưng tác dụng thuốc phụ thuộc lượng Vitamin K ăn vào.",
+    adviceVi:
+      "Rau giàu Vitamin K ăn dồn dập làm giảm tác dụng chống đông; bỏ rau đột ngột làm tăng nguy cơ chảy máu. Giữ khẩu phần rau đều mỗi ngày và theo dõi INR theo hẹn.",
+    relatedConditionIds: ["thuoc-chong-dong"],
+    sourceIds: ["vnha-af", "chest-antithrombotic", "duoc-thu-qg", "dav-vn"],
+  },
+  {
+    id: "warfarin",
+    inn: "Warfarin sodium",
+    innVi: "Warfarin",
+    strength: "1 mg / 2 mg / 5 mg — theo nhãn",
+    formVi: "Viên nén",
+    tradeNamesVn: ["Warfarin 1 mg / 2 mg / 5 mg (đối chiếu vỉ thuốc)", "Coumadin (tham chiếu)"],
+    potassiumEffect: "vitamin_k_interaction",
+    mechanismVi:
+      "Thuốc chống đông kháng vitamin K. Không làm thay đổi Kali máu, nhưng tác dụng thuốc phụ thuộc lượng Vitamin K ăn vào.",
+    adviceVi:
+      "Luộc chắt nước giảm Kali nhưng không giảm Vitamin K. Giữ lượng rau xanh ổn định giữa các ngày và báo bác sĩ khi đổi chế độ ăn.",
+    relatedConditionIds: ["thuoc-chong-dong"],
+    sourceIds: ["vnha-af", "chest-antithrombotic", "duoc-thu-qg", "dav-vn"],
   },
 ];
 

@@ -18,11 +18,11 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kali Bữa Ăn",
-    template: "%s · Kali Bữa Ăn",
+    default: "Quản lý Kali trong bữa ăn",
+    template: "%s · Quản lý Kali trong bữa ăn",
   },
   description:
-    "Ước lượng Kali theo cách chế biến, món Việt, bệnh lý và thuốc lưu hành tại Việt Nam. Công cụ giáo dục, không thay thế bác sĩ.",
+    "Ước lượng Kali theo cách chế biến, gợi ý theo bệnh lý, tra cứu thuốc cần chú ý Kali và lưu ý thuốc chống đông kháng vitamin K. Công cụ tham khảo, không thay thế bác sĩ.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

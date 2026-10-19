@@ -39,6 +39,16 @@ describe("catalog integrity", () => {
     }
   });
 
+  it("links the anticoagulant condition to vitamin K antagonists", () => {
+    const condition = CONDITIONS.find((item) => item.id === "thuoc-chong-dong");
+    expect(condition).toBeTruthy();
+    for (const medicineId of condition!.relatedMedicineIds) {
+      const medicine = MEDICINES.find((item) => item.id === medicineId);
+      expect(medicine?.potassiumEffect).toBe("vitamin_k_interaction");
+    }
+    expect(INGREDIENTS.some((item) => item.vitaminKRich)).toBe(true);
+  });
+
   it("matches Vietnamese search without accents", () => {
     expect(matchesQuery("Khoai tây", "khoai tay")).toBe(true);
     const found = searchByText(INGREDIENTS, "nuoc dua", (item) => [

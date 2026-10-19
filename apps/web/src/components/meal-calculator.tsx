@@ -4,12 +4,14 @@ import {
   COOKING_METHODS,
   INGREDIENTS,
   calculateMealPotassium,
+  getIngredient,
   searchByText,
   type CookingMethodId,
   type MealLine,
 } from "@repo/kali-core";
 import { useMemo, useState } from "react";
 import { PotassiumStat } from "./potassium-stat";
+import { VitaminKNotice } from "./vitamin-k-notice";
 
 type DraftLine = MealLine & { key: string };
 
@@ -48,6 +50,15 @@ export function MealCalculator({ initialLines }: { initialLines?: MealLine[] }) 
       ),
     [lines],
   );
+
+  const vitaminKNames = [
+    ...new Set(
+      lines
+        .map((line) => getIngredient(line.ingredientId))
+        .filter((ingredient) => ingredient?.vitaminKRich)
+        .map((ingredient) => ingredient!.nameVi),
+    ),
+  ];
 
   function update(key: string, patch: Partial<MealLine>) {
     setLines((current) =>
@@ -178,6 +189,7 @@ export function MealCalculator({ initialLines }: { initialLines?: MealLine[] }) 
             </li>
           ))}
         </ul>
+        {vitaminKNames.length > 0 ? <VitaminKNotice names={vitaminKNames} /> : null}
       </aside>
     </div>
   );

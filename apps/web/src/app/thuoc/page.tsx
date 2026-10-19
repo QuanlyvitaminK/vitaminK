@@ -11,6 +11,7 @@ const effectLabel = {
   decrease: "Hạ Kali máu",
   shift_into_cells: "Đưa Kali vào tế bào",
   caution_both: "Theo dõi hai chiều",
+  vitamin_k_interaction: "Không đổi Kali — lưu ý Vitamin K",
 };
 
 export default function MedicinesPage() {

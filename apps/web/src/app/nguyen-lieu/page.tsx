@@ -25,6 +25,9 @@ export default function IngredientsPage() {
               <p className="text-xs uppercase tracking-wide text-moss">{ingredient.category}</p>
               <h2 className="font-semibold">{ingredient.nameVi}</h2>
               <p className="text-sm opacity-70">{ingredient.potassiumMgPer100gRaw} mg / 100 g sống</p>
+              {ingredient.vitaminKRich ? (
+                <p className="mt-1 text-xs font-semibold text-violet-800">Giàu Vitamin K</p>
+              ) : null}
             </Link>
           </li>
         ))}

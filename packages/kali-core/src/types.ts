@@ -27,13 +27,17 @@ export type PotassiumEffect =
   | "increase"
   | "decrease"
   | "shift_into_cells"
-  | "caution_both";
+  | "caution_both"
+  | "vitamin_k_interaction";
 
 export type ConditionPotassiumIssue =
   | "hyperkalemia_risk"
+  | "hyperkalemia_emergency"
   | "hypokalemia_risk"
   | "both"
-  | "monitor";
+  | "monitor"
+  | "strict_control"
+  | "vitamin_k_antagonist";
 
 export type Ingredient = {
   id: string;
@@ -43,6 +47,7 @@ export type Ingredient = {
   potassiumMgPer100gRaw: number;
   typicalServingG: number;
   notesVi: string;
+  vitaminKRich?: boolean;
   sourceIds: string[];
 };
 
@@ -75,6 +80,7 @@ export type Condition = {
   id: string;
   nameVi: string;
   potassiumIssue: ConditionPotassiumIssue;
+  labelVi: string;
   summaryVi: string;
   dietGuidanceVi: string[];
   relatedMedicineIds: string[];
@@ -99,9 +105,10 @@ export type Citation = {
   id: string;
   title: string;
   org: string;
-  year: string;
+  year?: string;
   url?: string;
   noteVi: string;
+  group?: "vi" | "en";
 };
 
 export type PotassiumResult = {
